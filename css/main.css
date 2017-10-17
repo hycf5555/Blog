@@ -20,10 +20,10 @@
 
 /*主体框架布局CSS样式*/
 *{
-    margin:0;padding:0;
+    margin:0;padding:0;border: 0;
 }
 .main-wrapper{
-    background:#444 url(../img/banner.jpg);
+    background:#444 url(../img/pic03.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size:cover;
@@ -75,6 +75,7 @@ nav ul li a:hover {
 }
 #banner .inner h1 {
     margin: 0;
+    color: white;
 }
 button {
     border: none;
@@ -97,7 +98,11 @@ button {
 }
 #banner .inner .more a{
     text-decoration: none;
-    color:#000;
+    color: white;
+}
+#banner .inner .more a:hover{
+    text-decoration: none;
+    color: red;
 }
 .sub-heading {
     line-height: 30px;
@@ -635,3 +640,7 @@ footer ul li a{
     left:5px;
     transition:1s;
 }
+.more{
+    font-size: 24px;
+}
+

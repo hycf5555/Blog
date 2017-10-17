@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>实例展示</title>
+    <link rel="stylesheet" href="css/sample-main.css">
+</head>
+<body>
+	<sample class="sp">
+        <h2 id="juzhong">实例展示一：控制div属性</h1>
+            <div id="outer">
+               <input type="button" value="变宽" />
+               <input type="button" value="变高" />
+               <input type="button" value="变色" />
+               <input type="button" value="隐藏" />
+               <input type="button" value="重置" />
+               <div id="div1"></div>
+            </div>
+        <h3 id="juzhong">实例展示二：鼠标移入/移出改变样式</h2>
+               <div id="div2">鼠标移入改变样式，鼠标移出恢复。</div>
+        <h4 id="juzhong">实例展示三：简易时钟</h3>
+               <div id="clock">
+                    <span class="kuang"></span>点<span class="kuang"></span>分<span class="kuang"></span>秒
+               </div>
+        <script>
+            var changeStyle = function (elem, attr, value)
+            {
+                elem.style[attr] = value
+            };
+            window.onload = function ()
+            {
+                //实例一
+                var oBtn1 = document.getElementsByTagName("input");
+                var oDiv1 = document.getElementById("div1");
+                var oAtt1 = ["width","height","background","display","display"];
+                var oVal1 = ["200px","200px","red","none","block"];
+
+                for (var i = 0; i < oBtn1.length; i++)
+                {
+                    oBtn1[i].index = i;
+                    oBtn1[i].onclick = function ()
+                    {
+                        this.index == oBtn1.length - 1 && (oDiv1.style.cssText = "");
+                        changeStyle(oDiv1, oAtt1[this.index], oVal1[this.index])
+                    }   
+                }
+                //实例二
+                var oDiv2 = document.getElementById("div2");
+                oDiv2.onmouseover = function ()
+                {
+                    oDiv2.className = "hover"
+                };
+                oDiv2.onmouseout = function ()
+                {
+                    oDiv2.className = "" 
+                }
+                //实例三
+                var oClock = document.getElementById("clock");  
+                var aSpan = oClock.getElementsByTagName("span");
+                    
+                setInterval(getTimes, 1000);
+                getTimes();
+                function getTimes ()
+                {
+                    var oDate3 = new Date();
+                    var aDate3 = [oDate3.getHours(), oDate3.getMinutes(), oDate3.getSeconds()];
+                    for (var i in aDate3) aSpan[i].innerHTML = format(aDate3[i])
+                }
+                function format(a)
+                {
+                    return a.toString().replace(/^(\d)$/, "0$1")    
+                }
+            };
+        </script>
+  </sample>	
+</body>
+</html>

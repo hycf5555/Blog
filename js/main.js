@@ -586,9 +586,6 @@ function realScale(){
     }
     return scale();
 }
-
-
-
 addLoadEvent(sliderShow);
 addLoadEvent(timeClock);
 addLoadEvent(realScale);

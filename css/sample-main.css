@@ -1,0 +1,55 @@
+@charset "utf-8";
+.sp{
+    background-color:#444;
+    height: auto;
+    width: 100%;
+    float: left;
+
+}
+#outer{
+    margin: 0 auto 10px auto;
+    width: 1000px;
+    text-align:center;
+}
+#div1{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    margin: 10px auto;
+}
+#juzhong{
+    font-size: 24px;
+    text-align: center;
+}
+#div2{
+    width:150px;
+    height:150px;
+    margin:10px auto;
+    padding:10px;
+    background:black;
+    border:10px solid #000;
+    cursor:crosshair;
+}
+#div2.hover{
+    color:red;
+    background:#f0f0f0;
+    border:10px solid red;
+}
+#clock{
+    width:300px;
+    text-align:center;
+    background:#1a1a1a;
+    margin:10px auto;
+    padding:20px 0;
+    color:#fff;
+    font:16px/1.5 white;
+}
+.kuang{
+    color:#000;
+    width:50px;
+    line-height:2;
+    background:#fbfbfb;
+    border:2px solid #b4b4b4;
+    margin:0 10px;
+    padding:0 10px;
+}
