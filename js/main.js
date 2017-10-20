@@ -28,10 +28,10 @@
 
 
 
-        //var lightbox = $(".js-lightbox,[data-role=lightbox]");
+        /*var lightbox = $(".js-lightbox,[data-role=lightbox]");
         //lightbox.click(function(){
         //    alert("1")
-        //})
+        })*/
         this.groupName = null;
         this.groupData = [];
         this.bodyNode.delegate(".js-lightbox,*[data-role=lightbox]","click", function(e){
